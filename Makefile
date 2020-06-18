@@ -12,7 +12,7 @@ build/splinedict.o: build/splinedict.cxx | build
 build/splinedict.cxx: build/links | build
 	cd build && rootcling -f splinedict.cxx Roo*.h LinkDef.h
 
-build/links:
+build/links: | build
 	cd build && ln -sf ../*.h .
 	touch $@
 
