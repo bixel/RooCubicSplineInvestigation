@@ -5,4 +5,5 @@
 #pragma link C++ class RooEffResModel;
 #pragma link C++ class RooEffConvGenContext;
 #pragma link C++ class RooGaussEfficiencyModel;
+#pragma link C++ class DecRateCoeff;
 #endif

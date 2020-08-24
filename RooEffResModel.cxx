@@ -61,7 +61,7 @@ RooEffResModel::CacheElem::CacheElem(const RooEffResModel& parent, const RooArgS
     _x(0), _eff(0), _xmin(0), _xmax(0), _int(0),
     _val(std::numeric_limits<Double_t>::quiet_NaN())
 {
-    RooRealVar& x = parent.convVar(); // binboundaries not const...
+    auto& x = parent.convVar(); // binboundaries not const...
     RooAbsReal& eff = *parent.efficiency();
     RooAbsReal& model = parent.model();
     // the subset of iset on which the efficiency depends

@@ -10,7 +10,7 @@ build/splinedict.o: build/splinedict.cxx | build
 	$(CXX) $(shell root-config --cflags) -I. -fPIC -c $< -o $@
 
 build/splinedict.cxx: build/links | build
-	cd build && rootcling -f splinedict.cxx Roo*.h LinkDef.h
+	cd build && rootcling -f splinedict.cxx Roo*.h DecRateCoeff.h LinkDef.h
 
 build/links: | build
 	cd build && ln -sf ../*.h .
