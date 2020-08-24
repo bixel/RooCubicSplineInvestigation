@@ -15,19 +15,18 @@
 class RooAbsReal;
 
 class RooAbsEffResModel {
-public:
-   // Constructors, assignment etc
-   virtual ~RooAbsEffResModel();
-  
-   /** 
-    * Get a RooArgSet of all observables
-    * (pointer because genreflex dictionaries can't handle value)
-    * @return RooArgSet of observables
-    */
-   virtual RooArgSet* observables() const = 0;
+ public:
+  // Constructors, assignment etc
+  virtual ~RooAbsEffResModel();
 
-   virtual const RooAbsReal* efficiency() const = 0;
+  /**
+   * Get a RooArgSet of all observables
+   * (pointer because genreflex dictionaries can't handle value)
+   * @return RooArgSet of observables
+   */
+  virtual RooArgSet* observables() const = 0;
 
+  virtual const RooAbsReal* efficiency() const = 0;
 };
 
 #endif

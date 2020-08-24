@@ -1,5 +1,4 @@
-#include <RooResolutionModel.h>
 #include "RooAbsEffResModel.h"
+#include <RooResolutionModel.h>
 
-RooAbsEffResModel::~RooAbsEffResModel()
-{ }
+RooAbsEffResModel::~RooAbsEffResModel() {}
