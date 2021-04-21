@@ -1,4 +1,5 @@
 OBJFILES := $(patsubst %.cxx,build/%.o,$(wildcard *.cxx))
+CXX := $(shell root-config --cxx)
 
 build/LibRooCubicSpline.so: $(OBJFILES) build/splinedict.o | build
 	$(CXX) $(shell root-config --ldflags --glibs) -lRooFitCore -lRooFit -shared $^ -o $@
